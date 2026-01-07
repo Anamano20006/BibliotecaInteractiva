@@ -98,6 +98,12 @@ int main() {
         std::cout<<"0.Iesire"<<std::endl;
         std::cout<<"Alege(0-4): "<<std::endl;
         std::cin>>optiune;
+        if (!(std::cin >>optiune)) {
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+            std::cout<<"Optiune invalida.Introdu un nr intre 0 si 4"<<std::endl;
+            std::cin>>optiune;
+        }
         if (optiune==1) {
             b.afiseazaCarte(std::cout);
         }
