@@ -97,7 +97,6 @@ int main() {
 
         std::cout<<"0.Iesire"<<std::endl;
         std::cout<<"Alege(0-4): "<<std::endl;
-        std::cin>>optiune;
         if (!(std::cin >>optiune)) {
             std::cin.clear();
             std::cin.ignore(1000, '\n');
@@ -183,7 +182,7 @@ int main() {
         }
 
         try {
-            delete new Fantasy ("", "Autor", 2020,5,"Lume");
+             Fantasy f("", "Autor", 2020,5,"Lume");
 
         } catch (const CarteExceptie& e) {
             std::cout<<"Eroare carte: "<<e.what()<<std::endl;

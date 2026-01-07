@@ -37,3 +37,7 @@ std::ostream& operator<<(std::ostream& out, const Carte& c) {
     c.Afisare(out);
     return out;
 }
+std::istream& operator>>(std::istream& in, Carte& c) {
+    in>>c.titlu>>c.autor>>c.anAparitie>>c.gen;
+    return in;
+}

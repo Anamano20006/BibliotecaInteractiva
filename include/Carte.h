@@ -34,9 +34,10 @@ public:
     virtual void Afisare(std::ostream& out) const=0;
     bool operator<(const Carte& o) const;
     virtual int scorRecomandare(const Cititor& c) const=0;
+    friend std::ostream& operator<<(std::ostream& out, const Carte& c);
+    friend std::istream& operator>>(std::istream& in, Carte& c);
+
 
 };
-std::ostream& operator<<(std::ostream& out, const Carte& c);
-
 
 #endif //OOP_CARTE_H

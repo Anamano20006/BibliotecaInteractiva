@@ -16,7 +16,7 @@ private:
 public:
     Biblioteca();
     ~Biblioteca();
-    std::vector<Carte*> getCarti() const{return carti;}
+    const std::vector<Carte*>& getCarti() const{return carti;}
 
     void adaugaCarte(Carte* c);
     void afiseazaStatistici();
